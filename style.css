@@ -68,8 +68,13 @@ input {
   border-color: var(--focus);
 }
 
-.error {
+.inputs:invalid:not(:focus):not(:placeholder-shown) {
   border-color: var(--error);
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--error);
 }
 
 .flex {

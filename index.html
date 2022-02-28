@@ -62,7 +62,11 @@
           </p>
           <p>You <em>know</em> you want to.</p>
         </div>
-        <form>
+        <form
+          action="https://httpbin.org/post"
+          method="post"
+          autocomplete="off"
+        >
           <section class="input-form flex">
             <h2>Let's do this!</h2>
             <div class="input flex">
@@ -73,6 +77,9 @@
                   class="inputs"
                   type="text"
                   name="firstName"
+                  placeholder="firstname"
+                  pattern="[a-zA-Z]"
+                  title="First Name"
                   required
                 />
               </div>
@@ -83,6 +90,8 @@
                   class="inputs"
                   type="text"
                   name="lastName"
+                  placeholder="lastname"
+                  title="Last Name"
                   required
                 />
               </div>
@@ -94,16 +103,20 @@
                   type="email"
                   name="email"
                   placeholder="email@mail.com"
+                  title="Email"
                   required
                 />
               </div>
               <div class="flex">
-                <label for="phoneNumber">Phone Number (Optional)</label>
+                <label for="phoneNumber">Phone Number (optional)</label>
                 <input
                   id="phoneNumber"
                   class="inputs"
                   type="tel"
                   name="phoneNumber"
+                  title="Phone Number"
+                  placeholder="555-5555-5555"
+                  pattern="[1-9]"
                 />
               </div>
               <div class="flex">
@@ -113,8 +126,11 @@
                   class="inputs"
                   type="password"
                   name="password"
+                  placeholder="password"
+                  title="Password"
                   required
                 />
+                <div id="password-error" class="error"></div>
               </div>
               <div class="flex">
                 <label for="confirmPassword">Confirm Password</label>
@@ -123,6 +139,8 @@
                   class="inputs"
                   type="password"
                   name="confirmPassword"
+                  placeholder="password"
+                  title="Password"
                   required
                 />
               </div>
@@ -133,5 +151,6 @@
         <p><strong>Already have</strong> an account? <a href="#">Log in</a></p>
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
