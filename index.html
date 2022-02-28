@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Sign-up Form</title>
 
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="images/blueberries-256px.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Style -->
     <link rel="stylesheet" href="style.css" />
 
@@ -19,23 +34,104 @@
     />
   </head>
   <body>
-    <section class="image-sidebar flex">
-      <div class="logo flex">
-        <img src="images/blueberries-256px.png" alt="Blueberries Icon" />
-        <h1>Blueberry</h1>
-      </div>
-      <p>
-        Photo by
-        <a
-          href="https://unsplash.com/@sviathuzii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          >Sviatoslav Huzii</a
-        >
-        on
-        <a
-          href="https://unsplash.com/s/photos/blueberry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-          >Unsplash</a
-        >
-      </p>
-    </section>
+    <div class="content flex">
+      <section class="image-sidebar flex">
+        <div class="logo flex">
+          <img src="images/blueberries-256px.png" alt="Blueberries Icon" />
+          <h1>Blueberry</h1>
+        </div>
+        <p>
+          Photo by
+          <a
+            href="https://unsplash.com/@sviathuzii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Sviatoslav Huzii</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/blueberry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+      </section>
+      <section class="form-sidebar">
+        <div class="dummy-text">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <form>
+          <section class="input-form flex">
+            <h2>Let's do this!</h2>
+            <div class="input flex">
+              <div class="flex">
+                <label for="firstName">First Name</label>
+                <input
+                  id="firstName"
+                  class="inputs"
+                  type="text"
+                  name="firstName"
+                  required
+                />
+              </div>
+              <div class="flex">
+                <label for="lastName">Last Name</label>
+                <input
+                  id="lastName"
+                  class="inputs"
+                  type="text"
+                  name="lastName"
+                  required
+                />
+              </div>
+              <div class="flex">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  class="inputs"
+                  type="email"
+                  name="email"
+                  placeholder="email@mail.com"
+                  required
+                />
+              </div>
+              <div class="flex">
+                <label for="phoneNumber">Phone Number (Optional)</label>
+                <input
+                  id="phoneNumber"
+                  class="inputs"
+                  type="tel"
+                  name="phoneNumber"
+                />
+              </div>
+              <div class="flex">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  class="inputs"
+                  type="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="flex">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  id="confirmPassword"
+                  class="inputs"
+                  type="password"
+                  name="confirmPassword"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+        <p><strong>Already have</strong> an account? <a href="#">Log in</a></p>
+      </section>
+    </div>
   </body>
 </html>
